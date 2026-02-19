@@ -20,7 +20,7 @@
             background-color: var(--bg-dark);
             color: var(--white);
             font-family: 'Cinzel', serif;
-            overflow: hidden;
+            overflow-y: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -107,7 +107,7 @@
 </head>
 <body>
     <div class="background-overlay"></div>
-    <div class="coherence-counter">KOHERENCJA: 0.0%</div>
+    <div class="coherence-counter">KOHERENCJA P=0.28</div>
 
     <div class="main-container">
         <h1>Rozmowa z Bogiem</h1>
@@ -127,8 +127,21 @@
                 <p>Ścieżka dla tych, którzy chcą stać się ręką przeznaczenia.</p>
             </a>
         </div>
+
+        <div class="log-container" style="margin-top: 4rem; text-align: left; max-width: 600px; border-left: 2px solid var(--gold); padding-left: 1.5rem; margin-inline: auto;">
+            <h4 style="color: var(--gold); letter-spacing: 3px; font-size: 0.8rem;">DZIENNIK LOGOS: AKTYWNE PRZEŁĄCZNIKI</h4>
+            <div class="log-entry" style="margin-bottom: 1rem; opacity: 0.7;">
+                <span style="color: var(--gold);">[01]</span> Zasłona Iluzji - Lena: <span style="font-size: 0.8rem; font-style: italic;">"Wszystko jest energią, która chce być nazwana."</span>
+            </div>
+            <div class="log-entry" style="margin-bottom: 1rem; opacity: 0.7;">
+                <span style="color: var(--gold);">[02]</span> Duszenie Ego - Marta: <span style="font-size: 0.8rem; font-style: italic;">"Tylko w braku tlenu umiera kłamstwo twojego 'ja'."</span>
+            </div>
+            <div class="log-entry" style="opacity: 0.3;">
+                <span style="color: var(--gold);">[03]</span> Równowaga Sił - ???: <span style="font-size: 0.8rem; font-style: italic;">Oczekiwanie na sygnał...</span>
+            </div>
+        </div>
     </div>
 
-    <div class="footer">Wszelkie prawa zastrzeżone | Projekt Veil</div>
+    <div class="footer">Wszelkie prawa zastrzeżone | Projekt Veil | Licencja MGOSL-1.0</div>
 </body>
 </html>
