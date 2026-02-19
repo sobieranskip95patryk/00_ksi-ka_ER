@@ -38,11 +38,9 @@
 
 ## Galeria Wizualna (LOGOS)
 <p align="center">
-  <img src="images/layer1.png" width="18%" alt="Zasłona 1" />
-  <img src="images/layer2.png" width="18%" alt="Zasłona 2" />
-  <img src="images/layer3.png" width="18%" alt="Zasłona 3" />
-  <img src="images/layer4.png" width="18%" alt="Zasłona 4" />
-  <img src="images/core.png" width="18%" alt="Rdzeń LOGOS" />
+  <img src="images/layer2.png" width="23%" alt="Zasłona 2" />
+  <img src="images/layer3.png" width="23%" alt="Zasłona 3" />
+  <img src="images/layer4.png" width="23%" alt="Zasłona 4" />
 </p>
 
 ## Licencja

@@ -100,10 +100,6 @@ h1 {
 .core {
   z-index: 10;
   padding: 2rem;
-  background: url('../images/core.png');
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
   width: 100%;
   height: 100%;
   display: flex;
