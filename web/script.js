@@ -14,7 +14,9 @@ const countEl = document.getElementById('count');
 const coherenceEl = document.getElementById('coherence');
 const resetBtn = document.getElementById('reset-btn');
 
-veil.addEventListener('click', () => {
+let autoCycle;
+
+function revealNextLayer() {
     if (layerCount <= maxLayers) {
         let currentLayer;
         if (layerCount === 1) currentLayer = document.querySelector('.layer-1');
@@ -34,7 +36,27 @@ veil.addEventListener('click', () => {
             layerCount++;
             updateStats();
         }
+    } else {
+        // Carousel Loop: Reset to first layer if already at core
+        resetToStart();
     }
+}
+
+function resetToStart() {
+    layerCount = 1;
+    document.querySelectorAll('.layer').forEach(l => l.classList.remove('hidden'));
+    document.getElementById('core-reveal').classList.add('hidden');
+    // Hide intermediate reveal-ids if any
+    for(let i=2; i<=maxLayers; i++) {
+        const l = document.getElementById('layer' + i);
+        if(l) l.classList.add('hidden');
+    }
+    updateStats();
+}
+
+veil.addEventListener('click', () => {
+    clearInterval(autoCycle); // Stop auto when user interacts
+    revealNextLayer();
 });
 
 function updateStats() {
@@ -61,3 +83,10 @@ veil.addEventListener('mousemove', (e) => {
     const y = e.offsetY / veil.clientHeight;
     veil.style.borderColor = `rgba(212, 175, 55, ${0.3 + (x * 0.4)})`;
 });
+
+// Start Carousel Mode
+function startCarousel() {
+    autoCycle = setInterval(revealNextLayer, 4000); // Change image every 4 seconds
+}
+
+startCarousel();
