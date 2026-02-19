@@ -36,6 +36,15 @@
 ---
 *Projekt w toku. Struktura: /classic (tekst), /web (interakcja).*
 
+## Galeria Wizualna (LOGOS)
+<p align="center">
+  <img src="images/layer1.png" width="18%" alt="Zasłona 1" />
+  <img src="images/layer2.png" width="18%" alt="Zasłona 2" />
+  <img src="images/layer3.png" width="18%" alt="Zasłona 3" />
+  <img src="images/layer4.png" width="18%" alt="Zasłona 4" />
+  <img src="images/core.png" width="18%" alt="Rdzeń LOGOS" />
+</p>
+
 ## Licencja
 Ten projekt jest udostępniany na licencji **META GENIUS OPEN SAGA LICENSE (MGOSL-1.0)**. Szczegóły znajdziesz w pliku [LICENSE.md](LICENSE.md). Możesz pisać własne części sagi, zachowując spójność uniwersum!
 
