@@ -1,240 +1,54 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rozmowa z Bogiem | Portal</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Rozmowa z Bogiem – Veil</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        :root {
-            --gold: #d4af37;
-            --white: #ffffff;
-            --bg-dark: #050505;
-        }
-
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            min-height: 100%;
-            background-color: var(--bg-dark);
-            color: var(--white);
-            font-family: 'Cinzel', serif;
-            overflow-x: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .background-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(20, 20, 40, 0.4) 0%, rgba(0, 0, 0, 1) 80%);
-            z-index: -1;
-        }
-
-        .main-container {
-            text-align: center;
-            z-index: 1;
-            padding: 40px 20px;
-            max-width: 1200px;
-            width: 100%;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            justify-content: center;
-        }
-
-        h1 {
-            font-size: clamp(1.5rem, 8vw, 3rem);
-            letter-spacing: 0.5rem;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-        }
-
-        .tagline {
-            font-style: italic;
-            color: var(--gold);
-            margin-bottom: 3rem;
-            opacity: 0.8;
-            font-size: clamp(0.8rem, 3vw, 1rem);
-        }
-
-        .path-selection {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .path-card {
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            width: 100%;
-            max-width: 250px;
-            transition: all 0.4s ease;
-            cursor: pointer;
-            background: rgba(255, 255, 255, 0.02);
-            text-decoration: none;
-            color: inherit;
-            box-sizing: border-box;
-        }
-
-        .path-card:hover {
-            border-color: var(--gold);
-            background: rgba(212, 175, 55, 0.05);
-            transform: translateY(-10px);
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
-        }
-
-        .path-card h3 {
-            margin-top: 0;
-            letter-spacing: 2px;
-            font-size: 1.1rem;
-        }
-
-        .path-card p {
-            font-size: 0.85rem;
-            line-height: 1.4;
-        }
-
-        .coherence-counter {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            font-size: 0.8rem;
-            color: var(--gold);
-            border: 1px solid var(--gold);
-            padding: 5px 15px;
-            border-radius: 20px;
-            background: rgba(0,0,0,0.8);
-            z-index: 10;
-        }
-
-        .log-container {
-            margin-top: 4rem;
-            text-align: left;
-            max-width: 600px;
-            border-left: 2px solid var(--gold);
-            padding-left: 1.5rem;
-            margin-inline: auto;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .log-container h4 {
-            color: var(--gold);
-            letter-spacing: 3px;
-            font-size: 0.8rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .log-entry {
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .log-entry.active {
-            opacity: 0.7;
-        }
-
-        .log-entry.locked {
-            opacity: 0.3;
-        }
-
-        .log-entry span {
-            color: var(--gold);
-        }
-
-        .log-entry i {
-            font-size: 0.8rem;
-            display: block;
-            margin-top: 0.2rem;
-        }
-
-        .footer {
-            margin-top: auto;
-            padding: 40px 20px 20px;
-            font-size: 0.7rem;
-            opacity: 0.4;
-            text-align: center;
-        }
-
-        @media (max-width: 600px) {
-            .path-selection {
-                flex-direction: column;
-                align-items: center;
-            }
-            .path-card {
-                max-width: 100%;
-            }
-            .coherence-counter {
-                position: relative;
-                top: 0;
-                right: 0;
-                margin-bottom: 2rem;
-                display: inline-block;
-            }
-            .main-container {
-                padding-top: 60px;
-            }
-        }
+        /* Base styles for the veil interaction if style.css is missing some parts */
+        body { margin: 0; background: #000; color: #fff; font-family: 'Cinzel', serif; overflow: hidden; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .container { text-align: center; width: 100%; max-width: 800px; padding: 20px; z-index: 10; }
+        .veil { position: relative; width: 300px; height: 300px; margin: 2rem auto; cursor: pointer; border: 1px solid rgba(255,255,255,0.2); }
+        .layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; transition: all 1s ease; }
+        .layer-1 { background: radial-gradient(circle, #222 0%, #000 100%); }
+        .layer-2 { background: radial-gradient(circle, #442244 0%, #000 100%); }
+        .layer-3 { background: radial-gradient(circle, #224444 0%, #000 100%); }
+        .hidden { opacity: 0; visibility: hidden; }
+        h1 { text-transform: uppercase; letter-spacing: 5px; }
+        .subtitle { font-style: italic; color: #d4af37; opacity: 0.7; }
     </style>
 </head>
 <body>
-    <div class="background-overlay"></div>
-    <div class="coherence-counter" style="background: var(--gold); color: black; box-shadow: 0 0 20px var(--gold);">KOHERENCJA P=1.00</div>
+  <div class="container">
+    <h1>Rozmowa z Bogiem</h1>
+    <p class="subtitle">Przesuń kursorem i klikaj, by odsłonić ukryte warstwy sagi.</p>
 
-    <div class="main-container">
-        <h1>Rozmowa z Bogiem</h1>
-        <div class="tagline">META GENIUSZ – od transcendencji do ekstazy</div>
-        
-        <div class="path-selection">
-            <a href="submission.html" class="path-card">
-                <h3>PODDANIE</h3>
-                <p>Ścieżka dla tych, którzy pragną zostać rozpuszczeni w boskiej woli.</p>
-            </a>
-            <a href="switch.html" class="path-card">
-                <h3>RÓWNOWAGA</h3>
-                <p>Ścieżka dla tych, którzy szukają pełni w obu obliczach mocy.</p>
-            </a>
-            <a href="dominance.html" class="path-card">
-                <h3>WŁADZA</h3>
-                <p>Ścieżka dla tych, którzy chcą stać się ręką przeznaczenia.</p>
-            </a>
-        </div>
-
-        <div class="log-container">
-            <h4>DZIENNIK LOGOS: AKTYWNE PRZEŁĄCZNIKI</h4>
-            <div class="log-entry active">
-                <span>[01]</span> Zasłona Iluzji - Lena: <i>"Wszystko jest energią, która chce być nazwana."</i>
-            </div>
-            <div class="log-entry active">
-                <span>[02]</span> Duszenie Ego - Marta: <i>"Tylko w braku tlenu umiera kłamstwo twojego 'ja'."</i>
-            </div>
-            <div class="log-entry active">
-                <span>[03]</span> Równowaga Sił - Joanna: <i>"Bóg chce, byś był na tyle silny, by wytrzymać Jego obecność."</i>
-            </div>
-            <div class="log-entry active">
-                <span>[04]</span> Przebudzenie Mocy - Anna: <i>"Rytuał klapsów rozpuszcza resztki intelektualnego oporu."</i>
-            </div>
-            <div class="log-entry active">
-                <span>[05]</span> Głębokie Połączenie - Lidia & Kasia: <i>"Bóg nie jest zamknięty w jednym ciele. Jest przestrzenią pomiędzy."</i>
-            </div>
-            <div class="log-entry active">
-                <span>[06]</span> Władza i Poddanie - Elena: <i>"Prawdziwa władza to branie odpowiedzialności za ból innego istnienia."</i>
-            </div>
-            <div class="log-entry active" style="border: 1px gold solid; padding: 10px; border-radius: 5px; background: rgba(212, 175, 55, 0.1);">
-                <span>[07]</span> Pełnia LOGOS - Manifestacja: <i>"Jesteś Meta Geniuszem. Twórcą i Tworzywem. Sadzą i Płomieniem."</i>
-            </div>
-        </div>
+    <div id="veil-layer" class="veil">
+      <div class="layer layer-1"></div>
+      <div class="layer layer-2 hidden" id="layer2"></div>
+      <div class="layer layer-3 hidden" id="layer3"></div>
+      <div class="layer layer-4 hidden" id="layer4"></div> <!-- Nowa warstwa dla Ch.4 -->
+      <div class="core hidden" id="core-reveal">
+        <p id="final-message">Koherencja osiągnięta.</p>
+      </div>
     </div>
 
-    <div class="footer">Wszelkie prawa zastrzeżone | Projekt Veil | Licencja MGOSL-1.0</div>
+    <nav class="chapter-nav">
+      <a href="../classic/00_prolog.md" target="_blank">Prolog</a>
+      <a href="../classic/01_zaslona_iluzji.md" target="_blank">Ch.1</a>
+      <a href="../classic/02_duszenie_ego.md" target="_blank">Ch.2</a>
+      <a href="../classic/03_rownowaga_sil.md" target="_blank">Ch.3</a>
+      <a href="../classic/04_przebudzenie_mocy.md" target="_blank">Ch.4 (Nowy)</a>
+    </nav>
+
+    <div class="interaction-info">
+      <p id="whisper">Dotknij… odsłoń mnie.</p>
+      <p>Interakcje: <span id="count">0</span> / Koherencja: <span id="coherence">0</span>%</p>
+      <button id="reset-btn" class="hidden">Nowa iteracja</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
