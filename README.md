@@ -2,7 +2,10 @@
 
 **Podtytuł:** META GENIUSZ – od transcendencji do ekstazy
 
-## Wytyczne do projekt (wersja klasyczna + webowa)
+*Książka "Rozmowa z Bogiem" META GENIUSZ z różą i białymi koronkowymi stringami na okładce to idealny kontrast duchowości i erotyki.*
+
+## Wytyczne do projektu (wersja klasyczna + webowa)
+
 
 ### Informacje ogólne
 - **Gatunek:** Erotica duchowa / filozoficzno-erotyczna / dark romance z elementami BDSM i fetyszy.
