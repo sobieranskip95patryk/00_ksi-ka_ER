@@ -17,17 +17,20 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 1rem 0;
+  box-sizing: border-box;
 }
 
 .container {
   max-width: 900px;
   width: 90%;
   text-align: center;
+  margin: auto;
 }
 
 h1 {
   font-family: 'Cinzel', serif;
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 8vw, 3rem);
   letter-spacing: 0.2rem;
   color: var(--gold);
   margin-bottom: 0.5rem;
@@ -35,15 +38,15 @@ h1 {
 }
 
 .subtitle {
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 4vw, 1.1rem);
   opacity: 0.6;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(1rem, 5vw, 3rem);
 }
 
 .veil {
   position: relative;
-  width: 350px;
-  height: 350px;
+  width: min(350px, 80vw);
+  height: min(350px, 80vw);
   margin: 0 auto;
   border: 1px solid rgba(212, 175, 55, 0.3);
   box-shadow: 0 0 50px rgba(0,0,0,1);
@@ -172,4 +175,37 @@ button:hover {
 @keyframes glow {
   from { text-shadow: 0 0 10px var(--gold); }
   to { text-shadow: 0 0 30px var(--gold), 0 0 40px red; }
+}
+
+/* Responsywność dla małych ekranów */
+@media (max-width: 600px) {
+  .chapter-nav {
+    gap: 0.8rem;
+  }
+  
+  .chapter-nav a {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 4px;
+  }
+  
+  .interaction-info {
+    margin-top: 1.5rem;
+  }
+  
+  #whisper {
+    font-size: 0.8rem;
+  }
+}
+
+/* Zapobieganie ucinaniu treści na bardzo niskich ekranach */
+@media (max-height: 500px) {
+  body {
+    align-items: flex-start;
+  }
+  .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
