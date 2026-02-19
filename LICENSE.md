@@ -10,7 +10,7 @@ Każdy użytkownik (Licencjobiorca) ma prawo do:
 - **Publikacji:** Udostępniania swoich dzieł w celach niekomercyjnych i komercyjnych (pod warunkiem zachowania punktu 2).
 
 ## 2. Warunki
-- **Uznanie autorstwa:** Licencjobiorca musi wyraźnie zaznaczyć, że jego dzieło bazuje na oryginale "Rozmowa z Bogiem" autorstwa Patryka (META GENIUSZ).
+- **Uznanie autorstwa:** Licencjobiorca musi wyraźnie zaznaczyć, że jego dzieło bazuje na oryginale "Rozmowa z Bogiem" autorstwa Patryka Sobierańskiego (META GENIUSZ).
 - **Na tych samych warunkach:** Jeśli Licencjobiorca tworzy nowe dzieło w ramach tej sagi, musi je udostępnić na tej samej licencji (MGOSL), aby umożliwić dalszy rozwój uniwersum przez innych.
 - **Spójność ideowa:** Rekomenduje się zachowanie filozoficzno-erotycznego tonu oryginalu, gdzie orgazm i fetysze są traktowane jako narzędzia przebudzenia duchowego.
 
